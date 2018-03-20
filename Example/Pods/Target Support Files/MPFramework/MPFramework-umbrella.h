@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "UIColor+HEX.h"
+#import "UILabel+instance.h"
 
 FOUNDATION_EXPORT double MPFrameworkVersionNumber;
 FOUNDATION_EXPORT const unsigned char MPFrameworkVersionString[];
