@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MPFramework_Example' do
+  pod 'MPFramework', :path => '../'
+
+  target 'MPFramework_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
