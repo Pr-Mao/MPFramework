@@ -1,0 +1,22 @@
+{
+  "name": "MPFramework",
+  "version": "0.1.0",
+  "summary": "A short description of MPFramework.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Pr-Mao/MPFramework",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Pr-Mao": "843158788@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/Pr-Mao/MPFramework.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MPFramework/Classes/**/*"
+}

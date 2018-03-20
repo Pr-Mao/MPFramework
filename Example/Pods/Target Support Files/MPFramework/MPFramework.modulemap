@@ -1,0 +1,6 @@
+framework module MPFramework {
+  umbrella header "MPFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}

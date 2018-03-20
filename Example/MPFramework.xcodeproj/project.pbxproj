@@ -40,8 +40,8 @@
 		27036D5F05C1E9AAEE3F48D6 /* Pods-MPFramework_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPFramework_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MPFramework_Tests/Pods-MPFramework_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2B974E07CF05F2953FADC8F9 /* Pods_MPFramework_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MPFramework_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBD0599F782980FC7D3F39D /* Pods_MPFramework_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MPFramework_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		319890AC81C33D04F064D67D /* MPFramework.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MPFramework.podspec; path = ../MPFramework.podspec; sourceTree = "<group>"; };
-		430F48A5167361EA45007C60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		319890AC81C33D04F064D67D /* MPFramework.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MPFramework.podspec; path = ../MPFramework.podspec; sourceTree = "<group>"; };
+		430F48A5167361EA45007C60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4EF0A210A418242F7781CCBC /* Pods-MPFramework_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPFramework_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MPFramework_Tests/Pods-MPFramework_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MPFramework_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPFramework_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,7 +65,7 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91C20E88B314E903E1CCE616 /* Pods-MPFramework_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPFramework_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MPFramework_Example/Pods-MPFramework_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		AB8F0B6CDD3AD16CC03D8DB8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		AB8F0B6CDD3AD16CC03D8DB8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BB3FA2455428194789CD37DA /* Pods-MPFramework_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPFramework_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MPFramework_Example/Pods-MPFramework_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,6 +250,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Pr-Mao";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = D7J43AS94S;
+						ProvisioningStyle = Automatic;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -533,12 +537,18 @@
 			baseConfigurationReference = 91C20E88B314E903E1CCE616 /* Pods-MPFramework_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7J43AS94S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MPFramework/MPFramework-Prefix.pch";
 				INFOPLIST_FILE = "MPFramework/MPFramework-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.panfei.MPFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -548,12 +558,18 @@
 			baseConfigurationReference = BB3FA2455428194789CD37DA /* Pods-MPFramework_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7J43AS94S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MPFramework/MPFramework-Prefix.pch";
 				INFOPLIST_FILE = "MPFramework/MPFramework-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.panfei.MPFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

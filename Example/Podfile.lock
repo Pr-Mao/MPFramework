@@ -1,0 +1,16 @@
+PODS:
+  - MPFramework (0.1.0)
+
+DEPENDENCIES:
+  - MPFramework (from `../`)
+
+EXTERNAL SOURCES:
+  MPFramework:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MPFramework: c1cceccac31798875b1d9e273d3aca5fc1464bf5
+
+PODFILE CHECKSUM: 2c7f1c41ff626c4da5f4c248bcb38d5511811b52
+
+COCOAPODS: 1.3.1
